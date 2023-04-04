@@ -1,0 +1,29 @@
+--Create a outdoors outfitter database
+
+CREATE TABLE outdoors_outfitter (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, quantity INTEGER, catagory TEXT);
+INSERT INTO outdoors_outfitter VALUES 
+(1, "MRE", 5,50, "food"),
+(2,"Basic tent", 50, 10, "gear"),
+(3, "mid tent", 100, 12, "gear"),
+(4, "xpert tent", 200, 7, "gear"),
+(5, "Cold sleep bag", 75, 5, "gear"),
+(6, "mid sleep bag", 70, 9, "gear"),
+(7, "lt sleep bag", 75, 11, "gear"),
+(8, "ultra lt sleep bag", 80, 13, "gear"),
+(9, "hvy sleep bag", 35, 2, "gear"),
+(10, "lt sleep pad", 35, 4, "gear"),
+(11, "wht leggings", 32, 15, "clothes"),
+(12, "blk leggings", 32, 13, "clothes"),
+(13, "assorted trail mix", 10, 47, "food"),
+(14, "bear spray", 30, 6, "survival"),
+(15, "first aid kit", 27, 8, "survival"),
+(16, "knife and flashlight kit", 35, 5, "survival")
+;
+
+--display the database ordered by price
+SELECT * FROM outdoors_outfitter ORDER BY price;
+
+--What is the average price of items in the gear section?
+SELECT AVG (price)"avg gear item"
+FROM outdoors_outfitter
+WHERE (category)= 'gear';
